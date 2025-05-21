@@ -35,7 +35,7 @@ st.markdown(
 # Load model and tokenizer
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('IMDB Dataset.keras')
+    return tf.keras.models.load_model('IMDB_Dataset.keras')
 
 @st.cache_data
 def load_tokenizer():
