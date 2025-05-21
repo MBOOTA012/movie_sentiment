@@ -1,5 +1,5 @@
 streamlit
-tensorflow-gpu==2.15.0
+tensorflow
 pandas
 numpy
 scikit-learn
