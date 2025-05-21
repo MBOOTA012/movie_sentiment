@@ -2,13 +2,12 @@ import streamlit as st
 import tensorflow as tf
 import pickle
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-
 # Inject CSS for background image and styled container
 st.markdown(
     """
    <style>
     .stApp {
-        background-image: url("https://miro.medium.com/v2/resize:fit:1400/0*-IruQ2gNoC7NeHwj");
+        background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -17,7 +16,7 @@ st.markdown(
       color: #2E86C1 !important;
     }
     p {
-      color: orange !important;
+      color: green !important;
     }
     div[data-testid="stForm"] {
         background-color: black;
@@ -36,7 +35,7 @@ st.markdown(
 # Load model and tokenizer
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('imdb.keras')
+    return tf.keras.models.load_model('IMDB Dataset.keras')
 
 @st.cache_data
 def load_tokenizer():
@@ -50,10 +49,10 @@ MAX_SEQUENCE_LENGTH = 100
 
 # Begin form
 with st.form("titanic_form"):
-    st.title("🎬 Movie Review Sentiment Analyzer")
-    st.write("Enter a movie review below to predict its sentiment.")
+    st.title("🎬  Sentiment Analyzer to assess the sentiment of Titanic")
+    st.write("Enter a movie review for  prediction to sentiment analysis"".")
 
-    review = st.text_area("Movie Review", height=150)
+    review = st.text_area("Movie Review", height=100)
 
     # ✅ Submit button required for forms
     submit = st.form_submit_button("Predict Sentiment")
