@@ -39,7 +39,7 @@ def load_model():
 
 @st.cache_data
 def load_tokenizer():
-    with open('tokenizer.pkl', 'rb') as f:
+    with open('imdb.pkl', 'rb') as f:
         return pickle.load(f)
 
 model = load_model()
